@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Currency Converter</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #myInput {
+        background-image: url("/css/searchicon.png");
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        align-items: center;
+        width: 35%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block;
+      }
+
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body style="background-color: lavender;">
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="/" class="w3-bar-item w3-button"
+          ><b>$ Currency Converter</b></a
+        >
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="/" class="w3-bar-item w3-button">Home</a>
+        </div>
+      </div>
+    </div>
+    <div class="w3-container w3-padding-32" id="contact">
+      <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+        Live API Engine:
+      </h2>
+      <form method="post" action="{{ url_for('fullapi') }}">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          Click below to get full live API
+        </h3>
+        <button class="w3-button w3-black w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> Get!
+        </button>
+      </form>
+      <form method="post" action="{{ url_for('selapi') }}">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          Select a currency to get its live rate with respect to USD
+        </h3>
+        <select name="countries1" id="countries1">
+          <option value="USDAED">UAE - AED</option>
+          <option value="USDCAD">Canada - CAD</option>
+          <option value="USDINR">India - INR</option>
+          <option value="USDAUD">Australia - AUD</option>
+          <option value="USDBDT">Bangladesh - BDT</option>
+          <option value="USDBRL">Brazil - BRL</option>
+          <option value="USDXAF">Cameroon - XAF</option>
+          <option value="USDCLP">Chile - CLP</option>
+          <option value="USDCNY">China - CNY</option>
+          <option value="USDCUP">Cuba - CUP</option>
+          <option value="USDDKK">Denmark - DKK</option>
+          <option value="USDEGP">Egypt - EGP</option>
+          <option value="USDEUR">European Countries - EUR</option>
+          <option value="USDHKD">Hong kong - HKD</option>
+          <option value="USDHUF">Hungary - HUF</option>
+          <option value="USDJPY">Japan - JPY</option>
+          <option value="USDKRW">South Korea - KRW</option>
+          <option value="USDKWD">Kuwait - KWD</option>
+          <option value="USDMYR">Malaysia - MYR</option>
+          <option value="USDMXN">Mexico - MXN</option>
+          <option value="USDNZD">New zealand - NZD</option>
+          <option value="USDZAR">South Africa - ZAR</option>
+          <option value="USDSGD">Singapore - SGD</option>
+          <option value="USDCHF">Switzerland - CHF</option>
+          <option value="USDTRY">Turkey - TRY</option>
+          <option value="USDGBP">United Kingdom - GBP</option>
+        </select>
+        <button class="w3-button w3-black w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> Get API!
+        </button>
+      </form>
+    </div>
+    <!-- Footer -->
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <title>Currency Converter</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <body style="background-color: lavender;">
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"
+          ><b>$ Currency Converter</b></a
+        >
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="/countrylist" class="w3-bar-item w3-button">Country list</a>
+          <a href="/live" class="w3-bar-item w3-button">Live API</a>
+          <a href="/converter" class="w3-bar-item w3-button"
+            >Currency Converter</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-wide"
+      style="max-width: 1500px;"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="../static/images/calc.jpg"
+        alt="Architecture"
+        width="1500"
+        height="800"
+      />
+      <div class="w3-display-middle w3-margin-top w3-center">
+        <h1 class="w3-xxlarge w3-text-white">
+          <span class="w3-padding w3-black w3-opacity-min"
+            ><b>Currency</b></span
+          >
+          <span class="w3-hide-small w3-text-light-grey">Converter</span>
+        </h1>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width: 1564px;">
+      <!-- Project Section -->
+
+      <div class="w3-container w3-padding-32" id="countrylist">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          Country List
+        </h3>
+        <p>
+          To find out the list of countries available for currency conversion
+          and their current rates,
+        </p>
+        <a href="/countrylist">click here</a>
+      </div>
+
+      <div class="w3-container w3-padding-32" id="converter">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          Currency Converter
+        </h3>
+        <a href="/converter">click here to access the converter</a>
+      </div>
+    </div>
+
+    <div class="w3-container w3-padding-32" id="projects">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+        US $ Trend :
+      </h3>
+      <p>
+        For generating the trends of countries with respect to USD,
+      </p>
+      <a href="/trend">click here</a>
+    </div>
+
+    <!-- Footer -->
+  </body>
+  <footer class="w3-center w3-black w3-padding-16">
+    <p>
+      Data Programming Project
+    </p>
+  </footer>
+</html>

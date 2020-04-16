@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <title>Currency Converter</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #myInput {
+        background-image: url("/css/searchicon.png");
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        align-items: center;
+        width: 35%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block;
+      }
+
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+      
+    </style>
+  </head>
+  <body style="background-color: lavender;">
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="/" class="w3-bar-item w3-button"
+          ><b>$ Currency Converter</b></a
+        >
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="/" class="w3-bar-item w3-button">Home</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width: 1564px;">
+      <!-- Project Section -->
+      <div class="w3-container w3-padding-32" id="projects">
+        <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          List of countries available for conversion and their rates equivalent to US dollar:
+        </h2>
+        <input
+      type="text"
+      id="myInput"
+      onkeyup="myFunction()"
+      placeholder="Search for names of countries"
+      title="Type in a name"
+    />
+
+    <p>Last updated on :</p>
+    <p id="date"></p>
+
+    <script>
+      n = new Date();
+      y = n.getFullYear();
+      m = n.getMonth() + 1;
+      d = n.getDate();
+      document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    </script>
+
+    <ul id="myUL">
+      {% for i in x %} {% if i == "quotes" %}
+      <li>
+        <a href="#" style="text-align: center;">
+          USA &emsp; : &emsp;1  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          UAE &emsp; : &emsp;{{x[i]['USDAED']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Canada &emsp; : &emsp;{{x[i]['USDCAD']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          India &emsp; : &emsp;{{x[i]['USDINR']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Australia &emsp; : &emsp;{{x[i]['USDAUD']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Bangladesh &emsp; : &emsp;{{x[i]['USDBDT']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Brazil &emsp; : &emsp;{{x[i]['USDBRL']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Cameroon &emsp; : &emsp;{{x[i]['USDXAF']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Chile &emsp; : &emsp;{{x[i]['USDCLP']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          China &emsp; : &emsp;{{x[i]['USDCNY']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Cuba &emsp; : &emsp;{{x[i]['USDCUP']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Denmark &emsp; : &emsp;{{x[i]['USDDKK']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Egypt &emsp; : &emsp;{{x[i]['USDEGP']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          European Countries &emsp; : &emsp;{{x[i]['USDEUR']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Hong kong &emsp; : &emsp;{{x[i]['USDHKD']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Hungary &emsp; : &emsp;{{x[i]['USDHUF']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Japan &emsp; : &emsp;{{x[i]['USDJPY']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          South Korea &emsp; : &emsp;{{x[i]['USDKRW']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Kuwait &emsp; : &emsp;{{x[i]['USDKWD']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Malysia &emsp : &emsp;{{x[i]['USDMYR']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Mexico &emsp; : &emsp;{{x[i]['USDMXN']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          New zealand &emsp; : &emsp;{{x[i]['USDNZD']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          South Africa &emsp; : &emsp;{{x[i]['USDZAR']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Singapore &emsp; : &emsp;{{x[i]['USDSGD']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Switzerland &emsp; : &emsp;{{x[i]['USDCHF']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Turkey &emsp; : &emsp;{{x[i]['USDTRY']}}  &nbsp;  
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          United Kingdom &emsp; : &emsp;{{x[i]['USDGBP']}}  &nbsp;  
+        </a>
+      </li>
+
+      {% endif %} {% endfor %}
+    </ul>
+
+    <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+        
+      </div>
+
+      
+      
+      
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16" style="align-items: bottom;">
+      <p>
+        Data Programming final project
+      </p>
+
+    </footer>
+  </body>
+</html>
